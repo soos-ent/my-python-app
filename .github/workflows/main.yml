@@ -1,0 +1,15 @@
+name: SOOS Core SCA
+on: push
+jobs:
+  soos_sca:
+    name: SOOS SCA Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: soos-io/soos-sca-github-action@v1.0.3-beta
+        name: SOOS SCA Scan
+        with:
+          client_id: ${{ secrets.SOOS_CLIENT_ID }}
+          api_key: ${{ secrets.SOOS_API_KEY }}
+          project_name: ${{ github.repository }}
+          sarif: true
+          gpat: ${{ secrets.SOOS_GITHUB_PAT }}
