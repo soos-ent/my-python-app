@@ -8,8 +8,12 @@ jobs:
       - uses: soos-io/soos-sca-github-action@v1.0.3-beta
         name: SOOS SCA Scan
         with:
-          client_id: ${{ secrets.SOOS_CLIENT_ID }}
-          api_key: ${{ secrets.SOOS_API_KEY }}
           project_name: ${{ github.repository }}
+          branch_name: ${{ github.ref }}
+          commit_hash: ${{ github.sha }}
           sarif: true
           gpat: ${{ secrets.SOOS_GITHUB_PAT }}
+        env:
+          # Visit https://soos.io to get the required tokens to leverage SOOS scanning/analysis services
+          SOOS_CLIENT_ID: ${{ secrets.SOOS_CLIENT_ID }}
+          SOOS_API_KEY: ${{ secrets.SOOS_API_KEY }}
