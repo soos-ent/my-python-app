@@ -5,6 +5,7 @@ jobs:
     name: SOOS SCA Scan
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - uses: soos-io/soos-sca-github-action@v1.0.3-beta
         name: SOOS SCA Scan
         with:
