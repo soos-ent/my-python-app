@@ -14,7 +14,6 @@ jobs:
           commit_hash: ${{ github.sha }}
           sarif: true
           gpat: ${{ secrets.SOOS_GPAT }}
-        env:
           # Visit https://soos.io to get the required tokens to leverage SOOS scanning/analysis services
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
