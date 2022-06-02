@@ -10,8 +10,6 @@ jobs:
         name: SOOS SCA Scan
         with:
           project_name: ${{ github.repository }}
-          branch_name: ${{ github.ref }}
-          commit_hash: ${{ github.sha }}
           sarif: true
           gpat: ${{ secrets.SOOS_GPAT }}
           # Visit https://soos.io to get the required tokens to leverage SOOS scanning/analysis services
