@@ -16,5 +16,5 @@ jobs:
           gpat: ${{ secrets.SOOS_GPAT }}
         env:
           # Visit https://soos.io to get the required tokens to leverage SOOS scanning/analysis services
-          SOOS_CLIENT_ID: ${{ secrets.SOOS_CLIENT_ID }}
-          SOOS_API_KEY: ${{ secrets.SOOS_API_KEY }}
+          client_id: ${{ secrets.SOOS_CLIENT_ID }}
+          api_key: ${{ secrets.SOOS_API_KEY }}
